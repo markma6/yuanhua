@@ -9,8 +9,11 @@
 }
 
 html{
-	font: normal 16px sans-serif;
+	font-family: Helvetica Neue,Helvetica,Segoe UI,Arial,freesans,sans-serif;
+	line-height: 1.4em;
+	font-size: 16px;
 	color: #555;
+	background-color: #f3f3f3;
 }
 
 ul, nav{
@@ -73,7 +76,7 @@ section{
 section h3.title{
 	color: #414a4f;
 	text-transform: capitalize; 
-	font: bold 32px 'Open Sans', sans-serif;
+	font: bold 32px ;
 	margin-bottom: 35px;
 	text-align: center;
 }
@@ -150,12 +153,12 @@ ul.grid{
 }
 
 .hero h1{
-	font: bold 60px 'Open Sans', sans-serif;
+	font: bold 60px ;
 	margin-bottom: 15px;
 }
 
 .hero h3{
-	font: normal 28px 'Open Sans', sans-serif;
+	font: normal 28px ;
 	margin-bottom: 40px;
 }
 
