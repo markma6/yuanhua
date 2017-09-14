@@ -8,7 +8,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 // import '../assets/scss/main.scss'
 import AppNavigation from '../components/AppNavigation';
 import Index from '../pages/Index'
-import Login from '../pages/Login';
+//import Login from '../pages/Login';
+import LoginForm from '../forms/LoginForm'
 import RecoverPassword from '../pages/RecoverPassword';
 import ResetPassword from '../pages/ResetPassword';
 // import Signup from '../pages/Signup';
@@ -35,7 +36,7 @@ class CoreLayout extends React.Component {
           <Switch>
             <Route exact name="index" path="/" component={Index} />
             <Public path="/signup" component={SignUp} />
-            <Public path="/login" component={Login} />
+            <Public path="/login" component={LoginForm} />
             <Route name="recover-password" path="/recover-password" component={RecoverPassword} />
             <Route name="reset-password" path="/reset-password/:token" component={ResetPassword} />
           </Switch>

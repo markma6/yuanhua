@@ -2,19 +2,80 @@
     form styles
 */
 
-.form-validation{
+.form{
     box-sizing: border-box;
     max-width: 640px;
     margin: 0 auto;
     padding: 55px;
-
     background-color:  #ffffff;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-
-    font: bold 14px sans-serif;
+    font-weight: bold ;
     text-align: center;
+    border-radius: 4px;
 }
-
+.form>div {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    margin: 10px 5px;
+}
+form>div>div {
+    -ms-flex: 1;
+    flex: 1;
+    max-width: 400px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column;
+    position: relative;
+}
+.form>div>div>* {
+    -ms-flex: 1;
+    flex: 1;
+    font-size: 16px;
+    padding: 5px 8px;
+    border: 1px solid #ccc;
+}
+.form>div>label {
+    font-weight: 400;
+    margin-right: 10px;
+    min-width: 150px;
+    text-align: right;
+    padding: 6px 9px;
+}
+.form>div>div>span {
+    border: none;
+    font-weight: 200;
+    color: #700;
+}
+.form>div button[type=submit] {
+    white-space: nowrap;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 18px;
+    color: #fff;
+    background-image: linear-gradient(#4f93ce,#285f8f);
+    border: 1px solid #285f8f;
+}
+.form>div button[type=button] {
+    white-space: nowrap;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 18px;
+    color: #fff;
+    background-image: linear-gradient(#fff,#d5d5d5);
+    border: 1px solid #d5d5d5;
+    color: #000;
+}
+.form>div button[type=button][disabled] {
+    opacity: .6;
+    cursor: not-allowed;
+}
+.form>div button {
+    margin: 10px;
+}
 .form-row{
     position: relative;
     text-align: left;
@@ -26,7 +87,7 @@
     margin-bottom: 55px;
 }
 
-.form-validation h1{
+.form h1{
     display: inline-block;
     box-sizing: border-box;
     color:  #4c565e;
@@ -36,7 +97,7 @@
     margin:0;
 }
 
-.form-validation .form-row > label span{
+.form .form-row > label span{
     display: inline-block;
     box-sizing: border-box;
     color:  #5f5f5f;
@@ -45,11 +106,23 @@
     padding: 8px 25px;
 }
 
-.form-validation input{
-    position: relative;
+input {
+    -webkit-appearance: textfield;
+    background-color: white;
+    -webkit-rtl-ordering: logical;
+    user-select: text;
+    cursor: auto;
+    padding: 1px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+}
+.form input{
+    //position: relative;
     color:  #5f5f5f;
     box-sizing: border-box;
-    width: 240px;
+    //width: 240px;
     box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
     padding: 12px 18px;
     border: 1px solid #dbdbdb;
@@ -58,7 +131,7 @@
 
 /* Styles for Valid input data */
 
-.form-validation .form-valid-data-sign{
+.form .form-valid-data-sign{
     position: absolute;
     color: #ffffff;
     line-height: 24px;
@@ -74,16 +147,16 @@
 
 /* Styles for Invalid input data */
 
-.form-validation .form-invalid-data{
+.form .form-invalid-data{
     margin-bottom: 55px;
 }
 
-.form-validation .form-invalid-data input{
+.form .form-invalid-data input{
     border: 1px solid #d37171;
     box-shadow: 2px 3px 4px 0 rgba(200, 77, 77, 0.15);
 }
 
-.form-validation .form-invalid-data-sign{
+.form .form-invalid-data-sign{
     position: absolute;
     display: none;
     color: #ffffff;
@@ -98,7 +171,7 @@
     top: 10px;
 }
 
-.form-validation .form-invalid-data-info{
+.form .form-invalid-data-info{
     display: none;
     position: absolute;
     color: #c84d4d;
@@ -116,7 +189,7 @@
     display: block;
 }
 
-.form-validation select{
+.form select{
     background-color: #ffffff;
     color:  #5f5f5f;
     box-sizing: border-box;
@@ -126,35 +199,22 @@
     border: 1px solid #dbdbdb;
 }
 
-.form-validation .form-checkbox input{
+.form .form-checkbox input{
     width:auto;
 }
 
-.form-validation button{
-    display: block;
-    border-radius: 2px;
-    background-color:  #6caee0;
-    color: #ffffff;
-    font-weight: bold;
-    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
-    padding: 14px 22px;
-    border: 0;
-    margin: 40px 183px 0;
-}
-
-
 /* Placeholder color */
 
-.form-validation ::-webkit-input-placeholder {
+.form ::-webkit-input-placeholder {
     color:  #999;
 }
 
-.form-validation ::-moz-placeholder {
+.form ::-moz-placeholder {
     color:  #999;
     opacity: 1;
 }
 
-.form-validation :-ms-input-placeholder {
+.form :-ms-input-placeholder {
     color:  #999;
     opacity: 1;
 }
@@ -164,57 +224,57 @@
 
 @media (max-width: 700px) {
 
-    .form-validation{
+    .form{
         margin-top: 0;
         padding: 30px;
         max-width: 480px;
     }
 
-    .form-validation .form-row{
+    .form .form-row{
         max-width: 300px;
         margin: 25px auto;
         text-align: left;
     }
 
-    .form-validation .form-title-row{
+    .form .form-title-row{
         margin-bottom: 50px;
     }
 
-    .form-validation h1{
+    .form h1{
         padding: 0 0 15px 0;
     }
 
-    .form-validation .form-row > label span{
+    .form .form-row > label span{
         display: block;
         text-align: left;
         padding: 0 0 15px;
     }
 
-    .form-validation input,
-    .form-validation select{
+    .form input,
+    .form select{
         width: 220px;
     }
 
-    .form-validation .form-valid-data-sign,
-    .form-validation .form-invalid-data-sign{
+    .form .form-valid-data-sign,
+    .form .form-invalid-data-sign{
         left: 235px;
         top: 40px;
     }
 
-    .form-validation .form-invalid-data{
+    .form .form-invalid-data{
         margin-bottom: 55px;
     }
 
-    .form-validation .form-invalid-data-info{
+    .form .form-invalid-data-info{
         left: 0;
     }
 
-    .form-validation .form-checkbox span{
+    .form .form-checkbox span{
         display: inline-block !important;
         width: 100px !important;
     }
 
-    .form-validation button{
+    .form button{
         margin: 0;
     }
 
