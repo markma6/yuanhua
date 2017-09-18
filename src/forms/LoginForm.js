@@ -60,7 +60,7 @@ const renderField = ({
 const loginForm = (props) => {
   const { handleSubmit, pristine, reset, submitting } = props
   return (
-    <section>
+    <section className="main-content" >
       <form className="form" onSubmit={handleSubmit}>
         <div className="form-title-row">
           <h1>Log in</h1>

@@ -31,15 +31,17 @@ class CoreLayout extends React.Component {
   render() {
     return (
       <Router>
-        <div>
+        <div className="main">
           <AppNavigation authenticated={false} />
-          <Switch>
-            <Route exact name="index" path="/" component={Index} />
-            <Public path="/signup" component={SignUp} />
-            <Public path="/login" component={LoginForm} />
-            <Route name="recover-password" path="/recover-password" component={RecoverPassword} />
-            <Route name="reset-password" path="/reset-password/:token" component={ResetPassword} />
-          </Switch>
+        
+            <Switch>
+              <Route exact name="index" path="/" component={Index} />
+              <Public path="/signup" component={SignUp} />
+              <Public path="/login" component={LoginForm} />
+              <Route name="recover-password" path="/recover-password" component={RecoverPassword} />
+              <Route name="reset-password" path="/reset-password/:token" component={ResetPassword} />
+            </Switch>
+         
         </div>
       </Router>
     )

@@ -15,6 +15,19 @@ html{
 	color: #555;
 	background-color: #f3f3f3;
 }
+.main {
+	display: flex;
+	flex-flow: column nowrap;
+	min-height: 100vh;
+	min-width: 0;
+}
+.main-content {
+	display: flex;
+    -ms-flex-flow: column nowrap;
+	flex-flow: column nowrap;
+	flex:1;
+	border:solid 1px red;
+}
 
 ul, nav{
 	list-style: none;
@@ -124,7 +137,7 @@ ul.grid{
 .hero{
 	position: relative;
 	justify-content: center;
-	min-height: 100vh;
+	flex: 1;
 	color: #fff;
 	text-align: center;
 }
